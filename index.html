@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous"> 
+    <script src="https://use.fontawesome.com/8cce9ce3e7.js"></script>
 </head>
 <body>
     <div class="hero">
@@ -14,7 +16,9 @@
                 <img src="logocrib.jpg" alt="">
 
             </div>
-            <div class="nav-links">
+
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-close" onclick="closeMenu()"></i>
                 <ul>
                     <a href=""><li>Home</li></a>
                     <a href=""><li>Daycare</li></a>
@@ -23,17 +27,46 @@
                 </ul>
                 <button type="button" class="btn">Sign Up</button>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
 
-
-        </div>
+        </div> 
         <div class="banner-title">
             <h1>There<span> is no love like</span> <br>loving your little one</h1>
             <button type="button" class="btn">Explore</button>
         </div>
-        
+        <div class="vertical-bar">
+            <div class="search-icon ">
+                <i class="fa fa-th-list"></i>
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="social-icon">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-pinterest"></i>
+            </div>
+        </div>
+        <div class="notifications">
+            <div class="contents"><small>Lorem ipsum dolor sit amet consectetur 
+                 odio animi. Eligendi tenetur error placeat cum 
+                temporibus cupiditate earum in distinctio!</small><p><a href="">PREV</a><p><a href="">NEXT</a></p></div>
+            <div class="notification-img"><img src="play.jpg" alt=""></div>
+        </div>
     </div>
   
+<script>
+    var show = document.getElementById("nav-links");
+    function showMenu() {
+        show.style.right= "0";
 
+        
+    }
+    function closeMenu() {
+        show.style.right= "-200px";
+
+        
+    }
+</script>
     
 </body>
 </html>
